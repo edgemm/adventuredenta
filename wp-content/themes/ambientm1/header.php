@@ -45,6 +45,10 @@
 						<a href="<?php echo home_url(); ?>" class="logo-container">
 							<h1><?php bloginfo('name'); ?></h1>
 						</a>
+						<div class="header-contact">
+							<p class="contact-addr"><a href="https://goo.gl/maps/Fd8lg" target="_blank">900 NE 139th Street, Suite #106 <br />Vancouver, WA 98685</a></p>
+							<p class="contact-phone"><a href="360.604.9000">(360) 604-9000</a></p>
+						</div>
 						<nav role="navigation" class="navbar navbar-inverse">
 							<div class="navbar-inner">
 								<div class="container">

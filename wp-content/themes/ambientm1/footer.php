@@ -1,27 +1,13 @@
-	
-
-<div class="subfooter">
-			<div class="container">
-				<!-- Twitter widget -->
-				<div class="span6">
-					<a class="twitter-icon" href="https://twitter.com/AdventureDental" target="_blank">
-						<span>Follow Us On Twitter</span>
-					</a>
-					<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('subfooter')) ?>
-				</div>
-			
-
-			</div>
-		</div>
 		<footer class="footer" role="contentinfo">	
 			<div class="container">
 				<div itemscope itemtype="http://schema.org/LocalBusiness" class="copyright-holder">
-					<p class="copyright"><span itemprop="name">&copy;2014 Adventure Dental†</span></p>
-					<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" style="float:left;">
-						<p><span itemprop="streetAddress">900 NE 139th Street, Suite #106 </span><span itemprop="addressLocality">Vancouver</span>, <span itemprop="addressRegion">WA</span> <span itemprop="postalCode">98685</span></p></div><p style="float:left; padding-left: 6px;"><span itemprop="telephone"> | (360) 604-9000</span></p><div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates"> <meta itemprop="latitude" content="45.7219063" /><meta itemprop="longitude" content="-122.663113" />
-						<p><a href="/">Disclaimer</a> | <a href="/">Privacy Policy</a></p>
+					<p class="copyright"><span itemprop="name">&copy; <?php echo date( 'Y' ); ?> Adventure Dental†</span></p>
+					<div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<p><a href="https://goo.gl/maps/Fd8lg" target="_blank"><span itemprop="streetAddress">900 NE 139th Street, Suite #106 </span><span itemprop="addressLocality">Vancouver</span>, <span itemprop="addressRegion">WA</span> <span itemprop="postalCode">98685</span></a></p></div><p class="phone" style="float:left; padding-left: 6px;"><span itemprop="telephone"><a href="tel:360.604.9000">(360) 604-9000</a></span></p><div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates"> <meta itemprop="latitude" content="45.7219063" /><meta itemprop="longitude" content="-122.663113" />
+						<p class="disclaimer-privacy"><a href="/">Disclaimer</a> | <a href="/">Privacy Policy</a></p>
 					</div>
 				</div>
+				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('subfooter')) ?>
 				<p class="reference">
 					Web Design <span>+</span> Development by <a href="http://ambientm.com">Ambient</a>
 				</p>

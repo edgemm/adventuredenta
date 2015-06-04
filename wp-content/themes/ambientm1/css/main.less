@@ -19,7 +19,9 @@
   height: 100%;
 }
 
-h1 { background: url('../img/logo.png') no-repeat; text-indent: -10000px; overflow: hidden; z-index: 5; margin: 0; height: 100%; background-size: 371px 78px; }
+body { background: #fafafa; }
+
+h1 { background: url('../img/logo.png') no-repeat; text-indent: -10000px; overflow: hidden; z-index: 5; margin: 0; height: 100%; background-size: 393px 100px; }
 h2 { font: 700 16px 'Gotham SSm A', 'Gotham SSm B', sans-serif; color: rgba(240,85,64,1); text-transform: uppercase; margin-top: 63px;
 	&.tribe-events-page-title { color: rgba(240,85,64,1); }
 	&.tribe-events-single-event-title { color: rgba(240,85,64,1); }
@@ -42,8 +44,12 @@ button:focus { outline: none; }
 
 /* HEADER */
 
-header { background: rgba(8,136,139,1); padding: 21px 0;
-	a.logo-container { width: 371px; height: 78px; float: left; display: block; }
+header { background: rgba(8,136,139,1); padding: 5px 0;
+	a.logo-container { width: 393px; height: 100px; padding-bottom: 10px; float: left; display: block; }
+	.header-contact { float: right; text-align: right;
+	      p { margin: 0; font-size: 12px; line-height: 1.5em; text-align: right; color: #f2f2e6; }
+	      a { color: #f2f2e6; }
+	}
 	.social { 
 		a { text-indent: -10000px; overflow: hidden; display: block; float: left; margin: 0 10px 0 0; width: 41px; height: 40px;
 			&:last-child { margin: 0; }
@@ -65,6 +71,74 @@ header { background: rgba(8,136,139,1); padding: 21px 0;
 
 /* SLIDER */
 
+.container-slides:after {
+	width: 302px;
+	height: 298px;
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -282px;
+	background: url('../img/flosser-peek.png') no-repeat;
+	z-index: 100;
+}
+
+.ad-slides {
+	width: 100%;
+	max-height: 500px;
+	margin: 10px 0 0;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	display: none;
+	border: 3px solid #fafafa;
+	box-sizing: border-box;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+	box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+}
+.ad-slide {
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+.ad-slide-img {
+	width: 100%;
+    height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.ad-slide-container {
+	width: 1170px;
+	max-height: 778px;
+	margin: 0 auto;
+    display: none;
+	position: relative;
+	z-index: 10;
+}
+.slidesjs-navigation {
+	width: 55px;
+	height: 56px;
+	margin-top: -28px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	overflow: hidden;
+	text-indent: 200%;
+	white-space: nowrap;
+	background: url('http://adventuredental.com/wp-content/themes/ambientm1/img/ad-slides-navigation.png') no-repeat;
+	z-index: 10;
+}
+.slidesjs-previous {
+	left: 0;
+	background-position: 0 0;
+}
+.slidesjs-next {
+	right: 0;
+	background-position: 0 -56px;
+}
+
 .carousel { margin-bottom: 0px;
 	.carousel-inner {
 		.item {
@@ -80,8 +154,9 @@ header { background: rgba(8,136,139,1); padding: 21px 0;
 }
 
 /* NAVBAR */
+.navbar { float: right; clear: right; }
 .navbar-inverse .navbar-inner { background-color: transparent; background-image: none; border: 0px; box-shadow: none; -webkit-box-shadow: none; padding: 0; }
-.nav-collapse.collapse { float: right; padding: 29px 0 0 0;
+.nav-collapse.collapse { float: right; padding: 14px 0 0 0;
 	.nav { margin: 0;
 		li { float: left; padding: 0 24px 0 0;
 			&.dropdown.active a { background-color: transparent; box-shadow: none; -webkit-box-shadow: none; color: rgba(242,242,230,1); }
@@ -145,27 +220,11 @@ header { background: rgba(8,136,139,1); padding: 21px 0;
 /* PAGES */
 
 .home {
-	h2 { font: 60px "comic-serif-pro",serif; color: rgba(88,73,109,1); line-height: 80px; text-transform: none; }
-	hr { border-top: 2px solid rgba(115,99,87,1); border-bottom: 0px; padding: 0 0 10px 0; width: 85%; margin: 38px 0 0 0; }
-	.panel1 { background: rgba(243,241,213,1);
-		.container { background: url('../img/home-bg.jpg') repeat-y center; position: relative; padding: 0px 0 35px 0; background-size: 940px auto;
+	h2 { margin-top: 0; font: 60px "comic-serif-pro",serif; color: rgba(88,73,109,1); line-height: 60px; text-transform: none; }
+	hr { border-top: 2px solid rgba(115,99,87,1); border-bottom: 0px; padding: 0 0 10px 0; width: 85%; margin: 18px 0 0 0; }
+	.panel1 { overflow: hidden; background: rgba(243,241,213,1);
+		.container { background: url('../img/home-bg.jpg') repeat-y center; position: relative; padding: 0px 0 80px 0; background-size: 940px auto;
 			span.flosser { background: url('../img/flosser-main.png') no-repeat; display: block; width: 571px; height: 526px; overflow: hidden; text-indent: -10000px; margin-top: 8px; }
-			.alt { position: absolute; bottom: -107px; z-index: 20;
-				.peds { position: relative;
-					a { display: block; width: 125px; padding: 150px 0 0 0; background: url('../img/button-peds.png') no-repeat; margin: 0 auto; text-align: center; font: 500 24px "museo-slab",serif; color: rgba(115,99,87,1); line-height: normal; text-align: center; }
-				}
-				.teens {
-					a { display: block; width: 125px; padding: 150px 0 0 0; background: url('../img/button-teens.png') no-repeat; margin: 0 auto; text-align: center; font: 500 24px "museo-slab",serif; color: rgba(115,99,87,1); line-height: normal; text-align: center; }
-				}
-				.ortho {
-					a { display: block; width: 125px; padding: 150px 0 0 0; background: url('../img/button-ortho.png') no-repeat; margin: 0 auto; text-align: center; font: 500 24px "museo-slab",serif; color: rgba(115,99,87,1); line-height: normal; text-align: center; text-indent: -17px; }
-				}
-			}
-			.borders { position: absolute; width: 100%; bottom: 21px; z-index: 0;
-				.border1 { position: absolute; border-top: 5px solid rgba(53,168,161,1); border-bottom: 0px; top: 20px; z-index: 2; }
-				.border2 { position: absolute; border-top: 5px solid rgba(198,70,51,1); border-bottom: 0px; top: 20px; z-index: 1; width: 100% }
-				.border3 { position: absolute; border-top: 5px solid rgba(69,56,87,1); border-bottom: 0px; top: 20px; right: -20px; z-index: 1; }
-			}
 			.peds-popup { display: none; position: absolute; bottom: 1px; background: rgba(255,255,255,1); padding: 0 0 50px 0; left: -20px;
 				p { font: 300 20px "museo-slab",serif; color: rgba(115,99,87,1); line-height: 28px; text-align: center; padding: 38px 0 0 0; border-top: 19px solid rgba(53,168,161,1); }
 			}
@@ -177,7 +236,29 @@ header { background: rgba(8,136,139,1); padding: 21px 0;
 			}
 		}
 	}
-	.panel2 { padding-top: 152px; background: rgba(250,250,250,1); }
+	.panel2 { background: rgba(250,250,250,1); margin-bottom: 35px;
+		.row { margin-top: -70px; border-bottom: 1px solid #08888b;
+			.span4 { position: relative; }
+			.peds {
+				a { display: block; width: 125px; padding: 150px 0 0 0; background: url('../img/button-peds.png') no-repeat; margin: 0 auto; text-align: center; font: 500 24px "museo-slab",serif; color: rgba(115,99,87,1); line-height: normal; text-align: center; position: relative; z-index: 9999; }
+			}
+			.teens {
+				a { display: block; width: 125px; padding: 150px 0 0 0; background: url('../img/button-teens.png') no-repeat; margin: 0 auto; text-align: center; font: 500 24px "museo-slab",serif; color: rgba(115,99,87,1); line-height: normal; text-align: center; position: relative; z-index: 9999; }
+			}
+			.ortho {
+				a { display: block; width: 125px; padding: 150px 0 0 0; background: url('../img/button-ortho.png') no-repeat; margin: 0 auto; text-align: center; font: 500 24px "museo-slab",serif; color: rgba(115,99,87,1); line-height: normal; text-align: center; text-indent: -17px; position: relative; z-index: 9999; }
+			}
+			p { margin-top: 5px; }
+			.border1 { margin-left: 0; position: absolute; border-top: 5px solid rgba(53,168,161,1); border-bottom: 0px; top: 70px; z-index: 2; }
+			.border2 { margin: 0 -40px; padding: 0 40px; position: absolute; border-top: 5px solid rgba(198,70,51,1); border-bottom: 0px; top: 70px; z-index: 1; width: 100% }
+			.border3 { margin-left: 0; position: absolute; border-top: 5px solid rgba(69,56,87,1); border-bottom: 0px; top: 70px; z-index: 1; }
+		}
+	}
+	.panel3 {
+		.row {
+			 
+		}
+	}
 }
 
 .page {
@@ -570,12 +651,18 @@ aside.sidebar { padding: 65px 0 0 0;
 }
 footer { background: rgba(8,136,139,1); padding: 20px 0 7px 0;
 	.copyright-holder { float: left;
-		p { color: rgba(242,242,230,1); font: 300 14px 'Gill Sans', sans-serif; line-height: normal; letter-spacing: 1px; margin: 0 0 10px;
+		p { color: rgba(242,242,230,1); font: 300 14px 'Gill Sans', sans-serif; line-height: normal; letter-spacing: 1px; margin: 0 0 10px; clear: left;
 			&.copyright { font: 700 14px 'Gotham SSm A', 'Gotham SSm B', sans-serif; text-transform: uppercase; }
 			a { color: rgba(242,242,230,1); }
 		}
 	}
-	p.reference { float: right; color: rgba(0,183,187,1); font: 700 12px 'Gotham SSm A', 'Gotham SSm B', sans-serif; text-transform: uppercase; padding: 27px 0 0 0; letter-spacing: 1px;
+	.simple-social-icons { float: right;
+		a {
+		  padding: 8px !important;
+		  font-size: 16px !important;
+		}
+	}
+	p.reference { float: right; clear: right; color: rgba(0,183,187,1); font: 700 12px 'Gotham SSm A', 'Gotham SSm B', sans-serif; text-transform: uppercase; padding: 10px 0 0 0; letter-spacing: 1px;
 		span { color: rgba(242,242,230,1); }
 		a { color: rgba(0,183,187,1); text-decoration: underline;
 			&:hover { text-decoration: none; }
@@ -588,7 +675,8 @@ footer { background: rgba(8,136,139,1); padding: 20px 0 7px 0;
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) {
-	h1 { background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/logo@2x.png') no-repeat; background-size: 371px 78px; }
+	h1 { background: url('/wp-content/themes/ambientm1/img/logo@2x.png') no-repeat; background-size: 393px 100px; }
+	.container-slides:after { width: 306px; height: 298px; background-image: url('../img/flosser-peek@2x.png'); background-size: 306px 298px; }
 	.home .panel1 .container span.flosser {
 background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/flosser-main@2x.png') no-repeat; background-size: 571px 526px;
 	}
@@ -622,12 +710,22 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 @media (min-width: 768px) and (max-width: 979px) {
 	body {
 		p { font-size: 16px; }
+		.navbar { margin: 0; float: none;
+		    &:before {
+		      display: table;
+		      content: '';
+		      clear: both;
+		    }
+		    .nav-collapse .dropdown-menu { margin: 12px 0 0; position: absolute;
+			li + li a { margin: 0; }
+		    }
+		}
 		.navbar .btn-navbar { display: none; }
 		.nav-collapse.collapse { float: left; overflow: visible; }
-		&.home .panel1 .container { padding: 0 0 40px 0; }
+		&.home .panel1 .container { padding: 0 0 80px 0; }
 		&.home .panel1 .container .span6.intro { width: 100%; float: none; }
 		&.home h2 { font-size: 46px; line-height: normal; text-align: center; }
-		&.home hr { margin: 38px auto 20px auto; }
+		&.home hr { margin: 20px auto 18px; }
 		&.home .panel1 .container p { text-align: center; margin-bottom: 80px; }
 		&.home .panel1 .container span.flosser { display: none; }
 		&.home .panel1 .container .teens-popup { margin-left: -114px; }
@@ -658,7 +756,7 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		p { font-size: 16px; text-align: center; }
 		.container { padding: 0 10px; }
 		header { padding-bottom: 0; }
-		.navbar { margin: 0; }
+		.navbar { margin: 0; float: none; }
 		.nav-collapse .dropdown-menu { display: block; }
 		.nav-collapse.collapse { float: left; }
 		.nav-collapse.collapse .nav li { float: none; padding: 0 24px 0 0;
@@ -699,13 +797,16 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		}
 
 		&.home .panel1 .container { padding: 0 10px; }
+		&.home .panel1 .container-slides:after { display: none; }
 		&.home h2 { font-size: 46px; line-height: normal; }
-		&.home .panel1 { border-bottom: 5px solid #35a8a1; }
+		&.home .panel1 { padding-bottom: 10px; }
 		&.home .panel1 .container span.flosser { display: none; }
 		&.home .panel1 .container .alt { position: relative; bottom: auto; z-index: 0; padding-bottom: 30px; }
 		&.home .row.popups { display: none; }
 		&.home .panel1 .container .borders { display: none; }
 		&.home .panel2 { padding-top: 20px; }
+		&.home .panel2 .row { margin-top: 0; border-top: 0; }
+		&.home .panel2 .row [class*="border"] { margin: 0; padding: 0; }
 		footer p.reference { float: left; }
 		.meet-flosser .span7.offset1 { width: 50%; padding-left: 10px; }
 		.meet-flosser .container { padding-top: 26px; min-height: 440px; }
@@ -732,9 +833,10 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		&.page-template-template-right-sidebar-php aside.sidebar span.flosser-peek { top: -100px; }
 		&.page-template-template-right-sidebar-php aside.sidebar { padding: 160px 0 0 0; }
 		&.home h2 { text-align: center; }
-		&.home hr { margin: 38px auto 0 auto; }
-		footer .copyright-holder { float: none; }
-		footer p.reference { float: none; }
+		&.home hr { margin: 18px auto 0 auto; }
+		footer { text-align: center;
+		    div, p { float: none !important; }
+		}
 		aside.sidebar .sidebar-widget { text-align: center; }
 		.widget_nav_menu ul li a { padding-left: 0; }
 		.widget_nav_menu ul li .sub-menu li a { padding-left: 0; }
@@ -757,11 +859,16 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		h6 { font-size: 22px; line-height: 28px; text-align: center; }
 		p { font-size: 16px; text-align: center; }
 		.container { padding: 0 10px; }
-		header { padding-bottom: 0; }
-		header a.logo-container { width: 300px; height: 63px;
-			h1 { background-size: 300px 63px; }
+		header { padding-bottom: 0;
+		    a.logo-container { width: 236px; height: 60px; margin: 0 auto; float: none;
+			    h1 { background-size: 236px 60px; }
+		    }
+		    .header-contact { float: none;
+			p { text-align: center; }
+		    }
 		}
-		.navbar { margin: 0; }
+		.header-contact {}
+		.navbar { margin: 0; float: none; }
 		.nav-collapse .dropdown-menu { display: block; }
 		.nav-collapse.collapse { float: left; }
 		.nav-collapse.collapse .nav li { float: none; padding: 0 24px 0 0;
@@ -783,7 +890,7 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 				}
 			}
 		}
-		.navbar .btn-navbar { margin: 16px auto 0 auto; float: none; padding-bottom: 0px; }
+		.navbar .btn-navbar { margin: 16px auto 0 auto; float: right; padding-bottom: 0px; }
 		.nav-collapse.collapse .nav li#menu-item-56 ul li.current-menu-item { background: transparent;
 			&:hover { background: transparent; }
 		}
@@ -809,6 +916,7 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 			&:hover { color: rgba(240,85,64,1); background: transparent; }
 		}
 		&.home .panel1 .container { padding: 0 10px; }
+		&.home .panel1 .container-slides:after { display: none; }
 		&.home h2 { font-size: 42px; line-height: normal; }
 		&.home .panel1 { border-bottom: 5px solid #35a8a1; }
 		&.home .panel1 .container span.flosser { display: none; }
@@ -816,6 +924,8 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		&.home .row.popups { display: none; }
 		&.home .panel1 .container .borders { display: none; }
 		&.home .panel2 { padding-top: 20px; }
+		&.home .panel2 .row { margin-top: 0; border-top: 0; }
+		&.home .panel2 .row [class*="border"] { margin: 0; padding: 0; }
 		&.page-template-template-about-php .hero h3 { font-size: 52px; }
 		.team-bios { padding: 26px 0 0 0; }
 		.team-bios .bio-container { text-align: center; margin-bottom: 40px; }
@@ -843,9 +953,10 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		&.page-template-template-right-sidebar-php aside.sidebar { padding: 160px 0 0 0; }
 		&.page-template-template-orthodontics-php .hero h3, &.page-template-template-orthodontics-php .content-panel4 h3 { font-size: 42px; }
 		&.home h2 { text-align: center; }
-		&.home hr { margin: 38px auto 0 auto; }
-		footer .copyright-holder { float: none; }
-		footer p.reference { float: none; }
+		&.home hr { margin: 18px auto 0 auto; }
+		footer { text-align: center;
+		    div, p { float: none !important; }
+		}		
 		aside.sidebar .sidebar-widget { text-align: center; }
 		.widget_nav_menu ul li a { padding-left: 0; }
 		.widget_nav_menu ul li .sub-menu li a { padding-left: 0; }

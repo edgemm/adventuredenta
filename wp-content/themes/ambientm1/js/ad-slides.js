@@ -1,11 +1,11 @@
 (function($){
 
-$( '.rh-slides' ).slidesjs({
-	width: 960,
-	height: 480,
+$( '.ad-slides' ).slidesjs({
+	width: 1170,
+	height: 500,
 	play: {
 		active: false,
-		interval: 99999,
+		interval: 10000,
 		auto:true,
 		swap: true
 	},
@@ -22,16 +22,16 @@ $( '.rh-slides' ).slidesjs({
 	},
 	callback: {		
 		start: function() {
-			$( '.rh-slide-content' ).hide();
+			$( '.ad-slide-content' ).hide();
 		},
 		complete: function() {
-			$( '.rh-slide-content' ).hide().fadeIn( 800 );
+			$( '.ad-slide-content' ).hide().fadeIn( 800 );
 		}
 	}
 });
 
 // Hide slider navs when less than 2 slides
-var numSlides = $( '.rh-slide' ).length;
+var numSlides = $( '.ad-slide' ).length;
 if (numSlides <= 1) {
 	$( '.slidesjs-navigation' ).css( 'display', 'none' );
 }
