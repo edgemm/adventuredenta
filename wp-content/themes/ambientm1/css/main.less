@@ -19,6 +19,8 @@
   height: 100%;
 }
 
+body, html { height: 100%; }
+
 body { background: #fafafa; }
 
 h1 { background: url('../img/logo.png') no-repeat; text-indent: -10000px; overflow: hidden; z-index: 5; margin: 0; height: 100%; background-size: 393px 100px; }
@@ -47,7 +49,9 @@ button:focus { outline: none; }
 header { background: rgba(8,136,139,1); padding: 5px 0;
 	a.logo-container { width: 393px; height: 100px; padding-bottom: 10px; float: left; display: block; }
 	.header-contact { float: right; text-align: right;
-	      p { margin: 0; font-size: 12px; line-height: 1.5em; text-align: right; color: #f2f2e6; }
+	      .contact-phone { margin: 0 0 7px; font: 800 16px 'Gotham SSm A', 'Gotham SSm B', sans-serif; line-height: 1.5em; text-align: right; text-shadow: 2px 1px 2px #097679; text-transform: uppercase; color: #f2f2e6;
+		.contact-phone-teaser { display: block; font-size: 12px; }
+	      }
 	      a { color: #f2f2e6; }
 	}
 	.social { 
@@ -72,14 +76,15 @@ header { background: rgba(8,136,139,1); padding: 5px 0;
 /* SLIDER */
 
 .container-slides:after {
-	width: 302px;
-	height: 298px;
+	width: 316px;
+	height: 500px;
 	display: block;
 	content: '';
 	position: absolute;
 	top: 0;
-	right: -282px;
-	background: url('../img/flosser-peek.png') no-repeat;
+	left: -316px;
+	background: url('../img/flosser-peek2.png') no-repeat;
+	background-size: 100% 100%;
 	z-index: 100;
 }
 
@@ -287,7 +292,8 @@ header { background: rgba(8,136,139,1); padding: 5px 0;
 	}
 }
 
-.page-template-template-about-php {
+.page-template-template-about-php,
+.page-template-template-testimonials-php, {
 	.hero { background: url('../img/header1.jpg') no-repeat; height: 322px; background-size: cover; text-align: center; padding: 0 0 60px 0;
 		h2 { margin-top: 48px; }
 		h3 { font: 55px "comic-serif-pro",serif; color: rgba(88,73,109,1); line-height: normal; }
@@ -321,6 +327,60 @@ header { background: rgba(8,136,139,1); padding: 5px 0;
 		h4 { font: 60px "comic-serif-pro",serif; color: rgba(242,242,230,1); line-height: normal; margin: 10px 0 24px 0; }
 		p { color: rgba(144,160,73,1); }
 		span { background: url('../img/flosser-peek2.png') no-repeat; display: block; text-indent: -10000px; position: absolute; right: 0px; width: 396px; height: 626px; }
+	}
+}
+
+#testimonials.content-panel { padding: 0;
+	.panel { padding: 40px 0;
+		.container { display: table;
+			.testimonial-photo, .testimonial-content { width: 49%; display: table-cell; vertical-align: middle; text-align: left; }
+			.testimonial-photo { padding-right: 1%; }
+			.testimonial-content { padding-left: 1%; }
+			.testimonial-entries { margin: 0; padding: 0; list-style: none; font: 300 16px/24px 'Gill Sans', sans-serif; color: #736357;
+				.testimonial-entry {
+					margin-top: 20px;
+					&:first-child { margin-top: 0; }
+					.testimonial-details {
+						position: relative;
+						font-style: italic;
+						&:after {
+							width: 95px;
+							height: 18px;
+							display: inline-block;
+							position: relative;
+							top: 2px;
+							left: 10px;
+							content: '';
+							background: url( '../img/reviews-stars-brown.png' ) no-repeat right center;
+						}
+					}
+				}
+			}
+		}
+		&:nth-child( odd ) { background: #fafafa;
+			.testimonial-content { padding-right: 1%; }
+			.testimonial-photo { padding-left: 1%; }
+		}
+		&:nth-child( even ) { background: #fff;
+			.testimonial-photo { padding-right: 1%; }
+			.testimonial-content { padding-left: 1%; }
+		}
+		&:nth-child( 3 ) { background: #58496d; color: #fff;
+			.testimonial-entries { color: #fff;
+				.testimonial-entry .testimonial-details:after { background-image: url( '../img/reviews-stars-white.png' ) !important; }
+			}
+		}
+		&:nth-child( 6 ) { background: #f05540; color: #fff;
+			.testimonial-entries { color: #fff;
+				.testimonial-entry .testimonial-details:after { background-image: url( '../img/reviews-stars-white.png' ) !important; }
+			}
+		}
+		&.review-feed { background: #26b5c2; color: #fafafa;
+			.testimonial-photo { height: 300px; background: url('../img/flosser-main-sm.png') no-repeat center center; }
+			h3 { font: 55px "comic-serif-pro", serif; line-height: normal; color: #fafafa; }
+			p { color: #fafafa; }
+		}
+		
 	}
 }
 
@@ -387,10 +447,9 @@ aside.sidebar { padding: 65px 0 0 0;
 
 /* GALLERY */
 
-.photo-gallery, .videos {
-	p { text-align: center;
-		&.copyright { text-align: left; }
-	}
+.photo-gallery, .videos { background: #08888b;
+	.container-content { background: #fafafa; }
+	article p { text-align: center;	}
 	h2 { margin-bottom: 40px; }
 	div.pp_default .pp_content .ppt { display: none !important; }
 	article {
@@ -676,7 +735,7 @@ footer { background: rgba(8,136,139,1); padding: 20px 0 7px 0;
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) {
 	h1 { background: url('/wp-content/themes/ambientm1/img/logo@2x.png') no-repeat; background-size: 393px 100px; }
-	.container-slides:after { width: 306px; height: 298px; background-image: url('../img/flosser-peek@2x.png'); background-size: 306px 298px; }
+	.container-slides:after { background-image: url('../img/flosser-peek2@2x.png'); }
 	.home .panel1 .container span.flosser {
 background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/flosser-main@2x.png') no-repeat; background-size: 571px 526px;
 	}
@@ -691,6 +750,7 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 	.page-template-template-pediatrics-php .content-panel6 .dropdown-toggle { background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/plus-peds@2x.png') no-repeat transparent; background-size: 24px 24px; }
 	.page-template-template-orthodontics-php .content-panel6 .dropdown-toggle { background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/plus@2x.png') no-repeat transparent; background-size: 24px 24px; }
 	.page-template-template-teens-php .content-panel6 .dropdown-toggle { background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/plus-teens@2x.png') no-repeat transparent; background-size: 24px 24px; }
+	#testimonials.content-panel .panel.review-feed .testimonial-photo { background-image: url('../img/flosser-main-sm@2x.png'); background-size: 326px 300px; }
 }
 
 /* RESPONSIVE MEDIA QUERIES */
@@ -705,6 +765,16 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		&.page-template-template-teens-php .content-panel { padding-top: 26px; background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/skater-bg.jpg') center no-repeat; background-size: cover; }
 		&.page-template-template-teens-php .nav-collapse.collapse { padding-right: 116px; }
 	}
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+
+.container-slides:after {
+  width: 256px;
+  height: 405px;
+  left: -256px;
+}
+
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -723,6 +793,7 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		.navbar .btn-navbar { display: none; }
 		.nav-collapse.collapse { float: left; overflow: visible; }
 		&.home .panel1 .container { padding: 0 0 80px 0; }
+		&.home .container-slides:after { width: 198px; height: 313px; left: -198px; }
 		&.home .panel1 .container .span6.intro { width: 100%; float: none; }
 		&.home h2 { font-size: 46px; line-height: normal; text-align: center; }
 		&.home hr { margin: 20px auto 18px; }
@@ -851,6 +922,24 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 	}
 }
 
+@media (max-width: 767px) {
+	.testimonials {
+		.hero { height: auto; padding-bottom: 30px;
+			h2 { margin-top: 25px; }
+			h3 { font-size: 45px }
+		}
+		#testimonials.content-panel {
+			.panel {
+				.container {
+					.testimonial-photo, .testimonial-content { width: 100%; display: block; padding: 0 !important;
+						&:first-child { margin-bottom: 30px; }
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 479px) {
 	body { padding: 0;
 		h2 { margin-top: 23px; text-align: center; }
@@ -859,18 +948,19 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		h6 { font-size: 22px; line-height: 28px; text-align: center; }
 		p { font-size: 16px; text-align: center; }
 		.container { padding: 0 10px; }
-		header { padding-bottom: 0;
+		header { padding-bottom: 20px;
 		    a.logo-container { width: 236px; height: 60px; margin: 0 auto; float: none;
 			    h1 { background-size: 236px 60px; }
 		    }
 		    .header-contact { float: none;
-			p { text-align: center; }
+			.contact-phone { text-align: center; }
 		    }
 		}
 		.header-contact {}
-		.navbar { margin: 0; float: none; }
+		.navbar { margin: -60px 0 0; float: none; }
 		.nav-collapse .dropdown-menu { display: block; }
 		.nav-collapse.collapse { float: left; }
+		.nav-collapse.collapse.in { padding-top: 28px ;}
 		.nav-collapse.collapse .nav li { float: none; padding: 0 24px 0 0;
 			&:last-child { margin-bottom: 20px; }
 			ul {
@@ -945,6 +1035,11 @@ background: url('http://ad.ambientm.com/wp-content/themes/ambientm1/css/../img/f
 		&.page-template-template-teens-php .content-panel { padding-bottom: 50px; }
 		&.page-template-template-teens-php .hero { background: rgba(227,214,75,1); padding-top: 0; height: 550px; }
 		&.page-template-template-teens-php .hero h2, &.page-template-template-orthodontics-php .hero h2, &.page-template-template-pediatrics-php .hero h2 { margin-top: 0px; }
+		&.testimonials {
+			.hero { padding-bottom: 15px;
+				h3 { font-size: 32px }
+			}
+		}
 		&.contact iframe { width: 100%; }
 		&.page-template-template-right-sidebar-php article { border-right: 0px; }
 		&.contact .span3 { clear: both; }

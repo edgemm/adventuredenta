@@ -3,7 +3,7 @@
 				<div itemscope itemtype="http://schema.org/LocalBusiness" class="copyright-holder">
 					<p class="copyright"><span itemprop="name">&copy; <?php echo date( 'Y' ); ?> Adventure Dental†</span></p>
 					<div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-						<p><a href="https://goo.gl/maps/Fd8lg" target="_blank"><span itemprop="streetAddress">900 NE 139th Street, Suite #106 </span><span itemprop="addressLocality">Vancouver</span>, <span itemprop="addressRegion">WA</span> <span itemprop="postalCode">98685</span></a></p></div><p class="phone" style="float:left; padding-left: 6px;"><span itemprop="telephone"><a href="tel:360.604.9000">(360) 604-9000</a></span></p><div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates"> <meta itemprop="latitude" content="45.7219063" /><meta itemprop="longitude" content="-122.663113" />
+						<p><a href="https://goo.gl/maps/Fd8lg" target="_blank"><span itemprop="streetAddress">900 NE 139th Street, Suite #106 </span><span itemprop="addressLocality">Vancouver</span>, <span itemprop="addressRegion">WA</span> <span itemprop="postalCode">98685</span></a></p></div><p class="phone"><span itemprop="telephone"><a href="tel:360.604.9000">(360) 604-9000</a></span></p><div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates"> <meta itemprop="latitude" content="45.7219063" /><meta itemprop="longitude" content="-122.663113" />
 						<p class="disclaimer-privacy"><a href="/">Disclaimer</a> | <a href="/">Privacy Policy</a></p>
 					</div>
 				</div>
